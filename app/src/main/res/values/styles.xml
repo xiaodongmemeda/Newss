@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <!--黑夜主题-->
+    <style name="AppTheme.Black" parent="Theme.AppCompat">
+
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="radiobutton_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/text_color_sel</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_weight">0.01</item>
+        <item name="android:background">@color/colorgray2</item>
+    </style>
+    <style name="mine_textstyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+
+
+
+
+
+
+</resources>

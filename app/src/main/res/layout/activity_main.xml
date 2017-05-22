@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="test.qht.com.newss.view.activity.MainActivity">
+    <RadioGroup android:id="@+id/main_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+    >
+        <RadioButton
+            android:id="@+id/frontpage_rb"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:drawableTop="@drawable/frontpage_sel"
+            android:text="@string/home"
+        />
+        <RadioButton
+            android:id="@+id/video_rb"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/video_sel"
+            android:text="@string/video"
+        />
+        <RadioButton
+            android:id="@+id/headlines_rb"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/headline_sel"
+            android:text="@string/headline"
+        />
+        <RadioButton
+            android:id="@+id/me_rb"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/mine_sel"
+            android:text="@string/nologin"
+
+        />
+    </RadioGroup>
+   <RelativeLayout android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/main_rela"
+                   android:layout_above="@id/main_rg"
+   ></RelativeLayout>
+
+</RelativeLayout>

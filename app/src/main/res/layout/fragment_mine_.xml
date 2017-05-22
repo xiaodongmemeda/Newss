@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="test.qht.com.newss.view.fragment.Mine_Frag">
+    <LinearLayout android:id="@+id/mint_line_03"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@+id/mine_line_02"
+                  android:orientation="vertical"
+    >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+        />
+
+
+        <TextView
+            android:id="@+id/tv_information_inform"
+            style="@style/mine_textstyle"
+            android:text="消息通知 "
+        />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+        />
+
+
+        <TextView
+            android:id="@+id/tv_headline_market"
+            style="@style/mine_textstyle"
+            android:text="头条商城 "
+        />
+
+
+        <View
+            style="@style/view_style"/>
+
+
+        <TextView
+            android:id="@+id/tv_Jingdong_special_supply"
+            style="@style/mine_textstyle"
+            android:text="京东特供"
+        />
+
+
+        <View
+            style="@style/view_style"/>
+
+        <TextView
+            android:id="@+id/tv_disclose"
+            style="@style/mine_textstyle"
+            android:text="我要爆料"
+        />
+
+        <View
+            style="@style/view_style"/>
+
+
+        <TextView
+            android:id="@+id/tv_user_feedback"
+            style="@style/mine_textstyle"
+            android:text="用户反馈"
+        />
+
+
+        <View
+            style="@style/view_style"/>
+
+
+        <TextView
+            android:id="@+id/tv_system_set"
+            style="@style/mine_textstyle"
+            android:text="系统设置"
+        />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mine_line_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mine_rela1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Text_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/a1q"
+            android:gravity="center"
+            android:text="收藏"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/Text_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/b_refresh_tabbar"
+            android:gravity="center"
+            android:text="历史"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/Text_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ye_sel"
+            android:gravity="center"
+            android:text="夜间"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/mine_rela1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorgray">
+        <RelativeLayout android:id="@+id/mine_rela_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+
+
+        >
+
+            <LinearLayout
+                android:id="@+id/mine_line_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Image_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/cellphoneicon_login_profile"/>
+
+                <ImageView
+                    android:id="@+id/Image_QQ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/qqicon_login_profile"/>
+
+                <ImageView
+                    android:id="@+id/Image_xinlan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/sinaicon_login_profile"/>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/mine_morelogin_shap"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="更多登录方式>"
+                android:textColor="@color/colorwrite"
+                android:textSize="18dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/mine_rela_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:visibility="gone"
+
+        >
+            <RelativeLayout android:id="@+id/mine_rela_022"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+            >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/qq_login_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                />
+                <TextView
+                    android:id="@+id/qq_login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/qq_login_img"
+                    android:padding="6dp"
+                    android:text="更多登录方式>"
+                    android:textColor="@color/colorwrite"
+                    android:textSize="18dp"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/mine_line_011"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dongtai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="动态"
+                    android:textColor="@color/colorwrite"
+                />
+
+                <TextView
+                    android:id="@+id/fensi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="粉丝"
+                    android:textColor="@color/colorwrite"
+                />
+
+                <TextView
+                    android:id="@+id/qitian"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="7天访客"
+                    android:textColor="@color/colorwrite"
+                />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

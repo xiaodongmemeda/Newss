@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+>
+
+
+    <TextView
+        android:id="@+id/homef_item2_textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorblack"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:id="@+id/xlv2_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homef_item2_textview1">
+        <ImageView
+            android:id="@+id/homef_item2_image1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@mipmap/ic_launcher"/>
+        <ImageView
+            android:id="@+id/homef_item2_image2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:background="@mipmap/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/homef_item2_image3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_marginRight="15dp"
+
+            android:layout_weight="1"
+
+            android:background="@mipmap/ic_launcher"
+
+
+        />
+    </LinearLayout>
+
+</RelativeLayout>
