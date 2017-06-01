@@ -23,11 +23,12 @@
           android:layout_width="match_parent"
           android:layout_height="2dp"
     />
+
     <WebView android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:id="@+id/detail_webview"
              android:layout_below="@id/detail_rela"
-             android:layout_above="@+id/detail_rela2"
+             android:layout_above="@id/detail_rela2"
     ></WebView>
     <RelativeLayout android:id="@+id/detail_rela2"
                     android:layout_width="match_parent"

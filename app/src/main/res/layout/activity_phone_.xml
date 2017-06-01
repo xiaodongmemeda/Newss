@@ -93,7 +93,7 @@
 
         android:orientation="horizontal" android:weightSum="1">
         <TextView
-            android:id="@+id/phone_text2"
+            android:id="@+id/phone_text_enter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_sp1"

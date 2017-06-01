@@ -33,6 +33,28 @@ import test.qht.com.newss.view.activity.Phone_Activity;
 public class Mine_Frag extends Fragment {
     public ArrayList<SnsPlatform> platforms = new ArrayList<SnsPlatform>();
     private SHARE_MEDIA[] list = {SHARE_MEDIA.QQ};
+
+   /* public static Handler handlers=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 1:
+
+                    String s = (String) msg.obj;
+
+                    mine_rela_01.setVisibility(View.GONE);
+                    mine_rela_02.setVisibility(View.VISIBLE);
+
+                    Glide.with(context).load(R.mipmap.qp).into(qq_login_img);
+                    qq_login_text.setText(s);
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    };*/
     private UMAuthListener authListener = new UMAuthListener() {
         @Override
         public void onStart(SHARE_MEDIA share_media) {
@@ -75,10 +97,10 @@ public class Mine_Frag extends Fragment {
     private View view;
     private TextView textView;
     private ImageView imageView;
-    private RelativeLayout mine_rela_01;
-    private CircleImageView qq_login_img;
-    private TextView qq_login_text;
-    private RelativeLayout mine_rela_02;
+    private static RelativeLayout mine_rela_01;
+    private static CircleImageView qq_login_img;
+    private static TextView qq_login_text;
+    private static RelativeLayout mine_rela_02;
     private ImageView Image_phone;
 
     public Mine_Frag() {
@@ -91,10 +113,31 @@ public class Mine_Frag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_mine_, container, false);
+
         initView();
         initPlatforms();
         return view;
     }
+
+   /* @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(getActivity());
+    }*/
+
+    /*@Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(getActivity());
+    }
+    @Subscribe(threadMode = ThreadMode.ASYNC) //在ui线程执行
+    public void onDataSynEvent(String event) {
+        mine_rela_01.setVisibility(View.GONE);
+        mine_rela_02.setVisibility(View.VISIBLE);
+
+        Glide.with(context).load(R.mipmap.qp).into(qq_login_img);
+        qq_login_text.setText(event);
+    }*/
 
     private void initView() {
         textView = (TextView) view.findViewById(R.id.Text_night);

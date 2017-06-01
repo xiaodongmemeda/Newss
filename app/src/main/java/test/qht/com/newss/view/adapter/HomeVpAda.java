@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import test.qht.com.newss.model.home.HomeTitleBean;
@@ -20,7 +19,6 @@ public class HomeVpAda extends FragmentPagerAdapter {
 
 
     private List<HomeTitleBean.ResultBean.DateBean> mdatat = new ArrayList<>();
-    private HashMap<String,String> hashMap = new HashMap<>();
 
     public HomeVpAda(FragmentManager fm) {
         super(fm);
@@ -28,9 +26,9 @@ public class HomeVpAda extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Homef homef = new Homef();
-        hashMap.put("uri",mdatat.get(position).getUri());
-        homef.setHashMap(hashMap);
+        Homef homef = Homef.getInstance(mdatat.get(position).getUri());
+
+
         return homef;
     }
 

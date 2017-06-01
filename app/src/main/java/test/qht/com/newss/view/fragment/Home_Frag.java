@@ -73,6 +73,13 @@ public class Home_Frag extends Fragment implements IHomeView<HomeTitleBean> {
         frag_home_jia = (ImageView) view.findViewById(R.id.frag_home_jia);
         frag_home_tablayout = (TabLayout) view.findViewById(R.id.frag_home_tablayout);
         frag_home_viewpager = (ViewPager) view.findViewById(R.id.frag_home_viewpager);
+
+        frag_home_jia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent intent = new Intent(getActivity(),)
+            }
+        });
     }
 
     @Override

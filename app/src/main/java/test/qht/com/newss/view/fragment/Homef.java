@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,13 +27,19 @@ import test.qht.com.newss.view.iview.IHomeView;
  */
 public class Homef extends Fragment implements IHomeView<HomeBean>{
 
-
+    public static Homef getInstance(String uri){
+        Homef homef = new Homef();
+        Bundle bundle = new Bundle();
+        bundle.putString("uri",uri);
+        homef.setArguments(bundle);
+        return homef;
+    }
     private View view;
     private ListView homefrag_lv;
     private HomePresenter presenter;
     private HomefLvAda ada;
     public String uri;
-    private HashMap<String,String> mhashMap ;
+    private HashMap<String,String> mhashMap = new HashMap<>() ;
     public Homef() {
         // Required empty public constructor
     }
@@ -61,6 +68,10 @@ public class Homef extends Fragment implements IHomeView<HomeBean>{
         ada = new HomefLvAda(getActivity());
         ada.setHomepresenter(presenter);
         homefrag_lv.setAdapter(ada);
+        Bundle bundle = getArguments();
+        String uri = (String) bundle.get("uri");
+        Log.d("memeda", "initData: ========"+uri);
+        mhashMap.put("uri",uri);
         presenter.getDataH(HomeBean.class, UriUtils.uri,mhashMap);
     }
 
@@ -89,9 +100,5 @@ public class Homef extends Fragment implements IHomeView<HomeBean>{
     public void callBackDataErrH(HomeBean homeBean) {
 
     }
-    public void setHashMap(HashMap<String,String> hashMap){
-        if (hashMap!=null){
-            this.mhashMap = hashMap;
-        }
-    }
+
 }
