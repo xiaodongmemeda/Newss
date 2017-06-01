@@ -66,7 +66,7 @@ public class Detail_Activity extends AppCompatActivity implements View.OnClickLi
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bean");
         databean = (HomeBean.ResultBean.DataBean) bundle.getSerializable("b");
-
+        Log.d("memeda", "initData:====== "+databean.getUrl());
         //设置WebView属性，能够执行Javascript脚本
         detail_webview.getSettings().setJavaScriptEnabled(true);
         //加载需要显示的网页

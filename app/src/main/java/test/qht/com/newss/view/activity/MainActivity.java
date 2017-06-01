@@ -1,5 +1,6 @@
 package test.qht.com.newss.view.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,6 +33,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Video_Frag video_frag = new Video_Frag();
     private Headline_Frag headline_frag = new Headline_Frag();
     private Mine_Frag mine_frag = new Mine_Frag();
+
+
+
     public static Handler handler=new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -45,11 +49,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             }
         }
     };
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = MainActivity.this;
         initView();
         initData();
     }
